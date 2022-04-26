@@ -1,23 +1,46 @@
-import pytest
-import primos as pr
+from pytest import approx
+import arreglos as arr
 
-def test_es_divisible_true():    
-    assert pr.es_divisible(15, 5) == True
+def test_mayores_que_1():
+    assert arr.mayores_que(5, [7, 3, 6, 0, 4, 5, 10]) == 3
 
-def test_es_divisible_false():    
-    assert pr.es_divisible(15, 6) == False
+def test_mayores_que_2():
+    assert arr.mayores_que(2, [-1, 1, 8, 2, 0]) == 1
 
-def test_es_primo_true():    
-    assert pr.es_primo(17) == True
-    
-def test_es_primo_false():    
-    assert pr.es_primo(221) == False
+def test_media_aritmetica():
+    assert arr.media_aritmetica([6, 1, 4, 8]) == approx(4.75)
 
-def test_i_esimo_primo():
-    assert pr.i_esimo_primo(20) == 71
-    
-def test_primeros_primos():
-    assert pr.primeros_primos(10) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-    
-def test_primos_hasta():
-    assert pr.primos_hasta(19) == [2, 3, 5, 7, 11, 13, 17, 19]
+def test_mayores_promedio():
+    assert arr.mayores_promedio([6.5, 2.1, 2.0, 2.2, 6.1]) == 2
+
+def test_mediana_1():
+    assert arr.mediana([5.0, 1.4, 3.2]) == approx(3.22)
+
+def test_mediana_2():
+    assert arr.mediana([5.0, 1.4, 3.2, 0.1]) == approx(2.3)
+
+def test_desviacion_estandar_1():
+    assert arr.desviacion_estandar([1.3, 1.3, 1.3]) == approx(0.0)
+
+def test_desviacion_estandar_2():
+    assert arr.desviacion_estandar([4.0, 1.0, 11.0, 13.0, 2.0, 7.0]) == approx(4.88535225615)
+
+def test_desviacion_estandar_2():
+    assert arr.desviacion_estandar([1.5, 9.5]) == approx(5.65685424949)
+
+def test_modas_1():
+    assert arr.modas([5, 4, 1, 4, 3, 3, 4, 5, 0]) == [4]
+
+def test_modas_2():
+    assert arr.modas([5, 4, 1, 4, 3, 3, 4, 5, 0]) == [3, 4]
+
+def test_modas_3():
+    assert arr.modas([5, 4, 5, 4, 3, 3, 4, 5, 3]) == [3, 4, 5]
+
+def test_medias_moviles():
+    s = [5, 2, 2, 8, -4, -1, 2]
+    assert arr.medias_moviles(s, 3) == [ 3, 4, 2, 1, -1]
+
+def test_diferencias_finitas():
+    s = [5, 2, 2, 8, -4, -1, 2]
+    assert arr.diferencias_finitas(s) == [ -3, 0, 6, -12, 3, 3]
