@@ -15,7 +15,8 @@ Escriba la función media_aritmetica(datos), donde datos es una lista de número
     4.75
    ```
 
-3. Escriba un programa que pregunte al usuario cuántos datos ingresará, a continuación le pida que ingrese los datos uno por uno, y finalmente entregue como salida cuántos de los datos ingresados son mayores que el promedio.
+3. Escriba un procedimiento que pregunte al usuario cuántos datos ingresará, a continuación le pida que ingrese los datos uno por uno, y finalmente entregue como salida cuántos de los datos ingresados son mayores que el promedio.
+  mayores_promedio([6.5, 2.1, 2.0, 2.2, 6.1])
   ```sh
   Cuantos datos ingresara? 5
   Dato 1: 6.5
