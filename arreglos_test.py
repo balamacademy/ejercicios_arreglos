@@ -14,7 +14,7 @@ def test_mayores_promedio():
     assert arr.mayores_promedio([6.5, 2.1, 2.0, 2.2, 6.1]) == 2
 
 def test_mediana_1():
-    assert arr.mediana([5.0, 1.4, 3.2]) == approx(3.22)
+    assert arr.mediana([5.0, 1.4, 3.2]) == approx(3.2)
 
 def test_mediana_2():
     assert arr.mediana([5.0, 1.4, 3.2, 0.1]) == approx(2.3)
@@ -32,7 +32,7 @@ def test_modas_1():
     assert arr.modas([5, 4, 1, 4, 3, 3, 4, 5, 0]) == [4]
 
 def test_modas_2():
-    assert arr.modas([5, 4, 1, 4, 3, 3, 4, 5, 0]) == [3, 4]
+    assert arr.modas([5, 4, 1, 4, 3, 3, 4, 5, 3]) == [3, 4]
 
 def test_modas_3():
     assert arr.modas([5, 4, 5, 4, 3, 3, 4, 5, 3]) == [3, 4, 5]
