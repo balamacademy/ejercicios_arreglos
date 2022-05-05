@@ -14,7 +14,7 @@ def test_mayores_promedio():
     assert arr.mayores_promedio([6.5, 2.1, 2.0, 2.2, 6.1]) == 2
 
 def test_mediana_1():
-    assert arr.mediana([5.0, 1.4, 3.2]) == approx(3.22)
+    assert arr.mediana([5.0, 1.4, 3.2]) == approx(3.2)
 
 def test_mediana_2():
     assert arr.mediana([5.0, 1.4, 3.2, 0.1]) == approx(2.3)
